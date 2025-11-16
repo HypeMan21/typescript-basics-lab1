@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>TypeScript Landing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<header class="header">
+    <div class="container header__inner">
+        <div class="logo">TS Landing</div>
+        <nav class="nav">
+            <a href="#about" class="nav__link">Про нас</a>
+            <a href="#posts" class="nav__link">Пости</a>
+            <a href="#contact" class="nav__link">Контакти</a>
+        </nav>
+        <button id="openModal" class="btn btn--outline">Відкрити модальне вікно</button>
+    </div>
+</header>
+
+<main>
+    <section class="hero" id="top">
+        <div class="container hero__inner">
+            <div class="hero__content" data-animate>
+                <h1>Сучасний лендинг на TypeScript</h1>
+                <p>
+                    Приклад інтерактивного сайту з модальним вікном, анімаціями,
+                    обробниками подій та завантаженням даних з API.
+                </p>
+                <button id="scrollToPosts" class="btn">Перейти до постів</button>
+            </div>
+            <div class="hero__image" data-animate>
+                <div class="card">
+                    <h2>TypeScript + HTML/CSS</h2>
+                    <p>Чистий та безпечний код з примітивними типами.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section__title" data-animate>Про проєкт</h2>
+            <p class="section__text" data-animate>
+                Цей лендинг створений як навчальний приклад. Він демонструє:
+                роботу з модальними вікнами, обробку подій scroll та click,
+                базову анімацію елементів при прокрутці сторінки, а також
+                завантаження та відображення даних з публічного API.
+            </p>
+        </div>
+    </section>
+
+    <section class="section section--alt" id="posts">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title" data-animate>Пости з JSONPlaceholder</h2>
+                <button id="loadPostsBtn" class="btn">Завантажити пости</button>
+            </div>
+            <div id="postsContainer" class="posts"></div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section__title" data-animate>Контакти</h2>
+            <p class="section__text" data-animate>
+                Це демо-сторінка. У реальному проєкті тут були б ваші контактні дані,
+                форма зворотнього звʼязку та інші інтерактивні елементи.
+            </p>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer__inner">
+        <span>© 2025 TypeScript Landing</span>
+        <button id="backToTop" class="btn btn--small btn--ghost">До гори</button>
+    </div>
+</footer>
+
+<!-- Модальне вікно -->
+<div id="modalOverlay" class="modal-overlay">
+    <div class="modal">
+        <button id="closeModal" class="modal__close">&times;</button>
+        <h2>Привіт з модального вікна!</h2>
+        <p>
+            Це модальне вікно, яке відкривається по кліку на кнопку у хедері
+            та закривається по кліку на хрестик або по темному фону.
+        </p>
+    </div>
+</div>
+
+<!-- Підключаємо скомпільований JS -->
+<script type="module" src="./dist/app.js"></script>
+</body>
+</html>
