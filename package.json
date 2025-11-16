@@ -1,0 +1,17 @@
+{
+  "name": "typescript-project",
+  "version": "1.0.0",
+  "description": "Base TypeScript setup",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
